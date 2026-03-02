@@ -11,6 +11,7 @@
         <el-menu-item index="/element-plus">element-plus</el-menu-item>
         <el-menu-item index="/ant-design-vue">ant-design-vue</el-menu-item>
         <el-menu-item index="/inline">inline</el-menu-item>
+        <el-menu-item index="/nested">嵌套子应用 C</el-menu-item>
       </el-menu>
       <router-view></router-view>
       <!-- <div id="test-innerHTML"></div> -->
@@ -21,13 +22,8 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import microApp from '@micro-zoe/micro-app'
 
-microApp.start({
-  // tagName: 'micro-app-vue'
-})
-
-const activePath = ref(null)
+const activePath = ref('null')
 const route = useRoute()
 const router = useRouter()
 

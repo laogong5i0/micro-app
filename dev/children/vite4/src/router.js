@@ -20,6 +20,11 @@ const routes = [
     path: '/inline',
     name: 'inline',
     component: () => import('./pages/inline.vue')
+  },
+  {
+    path: '/nested/:page*',
+    name: 'nested',
+    component: () => import('./pages/nested.vue')
   }
 ]
 

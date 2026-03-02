@@ -3,6 +3,8 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import routes from './router'
+// 引入 micro-app 用于嵌套加载子应用 C
+import microApp from '@micro-zoe/micro-app'
 // import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
 // import Antd from 'ant-design-vue'
@@ -47,6 +49,16 @@ function handleMicroData () {
 let app = null
 let router = null
 let history = null
+
+// 在微前端环境中初始化 micro-app（用于嵌套加载子应用 C）
+if (window.__MICRO_APP_ENVIRONMENT__) {
+  microApp.start({
+    // 自定义标签名，避免与主应用冲突
+    tagName: 'micro-app-vite4',
+  })
+  console.log('✅ 子应用 B (vite4) 已初始化 micro-app，tagName: micro-app-vite4')
+}
+
 // 将渲染操作放入 mount 函数
 window.mount = (data) => {
   history = createWebHistory(window.__MICRO_APP_BASE_ROUTE__ || import.meta.env.BASE_URL)

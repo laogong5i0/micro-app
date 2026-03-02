@@ -93,6 +93,23 @@ yarn bootstrap
 yarn start
 ```
 
+4、Test nested iframe scenarios (three-layer nesting)
+```bash
+# Step 1: Build the library
+yarn build
+
+# Step 2: Start main application (Vite)
+yarn main-vite
+
+# Step 3: Start child application B (vite4) - in a new terminal
+yarn start-child:vite4
+
+# Step 4: Start child application C (vite2) - in a new terminal
+yarn start-child:vite2
+
+# Then visit http://localhost:5000 and navigate to the nested test page
+```
+
 For more commands, see [DEVELOP](https://github.com/jd-opensource/micro-app/blob/master/DEVELOP.md)
 
 # FAQ
