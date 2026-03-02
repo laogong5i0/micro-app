@@ -4,7 +4,12 @@ import {createRouter, createWebHistory} from "vue-router";
 const routes = [
   {
     path: '/',
-    redirect: '/react16/'
+    redirect: '/nested'
+  },
+  {
+    path: '/nested/:page*',
+    name: 'nested',
+    component: () => import('../pages/nested.vue'),
   },
   {
     path: '/react16/:page*',

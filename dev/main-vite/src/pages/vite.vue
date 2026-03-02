@@ -1,10 +1,9 @@
 <template>
   <div class="vite">
     <micro-app
-      name='vite'
-      url='http://localhost:7001/micro-app/vite/'
-      inline
-      disableSandbox
+      name='vite2'
+      url='http://localhost:7001/'
+      iframe
     >
     <!-- destroy inline scopecss='false' -->
     </micro-app>

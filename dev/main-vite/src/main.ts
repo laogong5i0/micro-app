@@ -7,6 +7,8 @@ import 'element-plus/dist/index.css'
 import router from './router';
 
 microApp.start({
+  // 配置 iframe 沙箱的 empty.html 路径
+  // iframeSrc: 'http://localhost:5000/empty.html',
   lifeCycles: {
     created() {
       console.log('created 全局监听')

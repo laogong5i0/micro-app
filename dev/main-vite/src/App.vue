@@ -37,6 +37,10 @@
       <i class="el-icon-s-platform"></i>
       <span slot="title">self</span>
     </el-menu-item>
+    <el-menu-item index="/nested/">
+      <i class="el-icon-s-platform"></i>
+      <span slot="title">vite4 (nested)</span>
+    </el-menu-item>
   </el-menu>
 </div>
 <div class="router-con">
